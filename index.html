@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>HTML + CSS Spinner</title>
+		
+		<link rel="stylesheet" href="css/spinner.css">
+		
+		<script src="js/spinner.js"></script>
+		
+		<script>
+			function ExibirSpinner() {
+				ShowSpinner(document.getElementById("mensagem").value);
+				setTimeout(EsconderSpinner, 3000);
+			}
+			
+			var EsconderSpinner = function () {
+				HideSpinner();
+			};
+		</script>
+	</head>
+
+    <body style="text-align: center;">
+		<h1>Spinner Animado - HTML + CSS + JavaScript</h1>
+		
+		<div style="margin-top: 50px;">
+			<label for="mensagem">Digite uma mensagem:</label>
+			<input type="text" id="mensagem" name="mensagem" value="Carregando...">
+			<br />
+			<br />
+			<button type="button" onclick="ExibirSpinner()">Exibir spinner por 3 segundos</button>
+		</div>
+		
+        <div id="overlay" style="display:none;">
+            <div class="spinner" id="spinner"></div>
+            <br />
+            <label class="spinner-message" id="spinnerMessage"></label>
+        </div>
+    </body>
+</html>
