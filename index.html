@@ -9,7 +9,7 @@
 		
 		<link rel="stylesheet" href="css/spinner.css">
 		
-		<script src="js/spinner.js"></script>
+		<script type="text/javascript" src="js/spinner.js"></script>
 		
 		<script>
 			function ExibirSpinner() {
@@ -17,7 +17,7 @@
 				setTimeout(EsconderSpinner, 3000);
 			}
 			
-			var EsconderSpinner = function () {
+			var EsconderSpinner = function() {
 				HideSpinner();
 			};
 		</script>
@@ -33,11 +33,10 @@
 			<br />
 			<button type="button" onclick="ExibirSpinner()">Exibir spinner por 3 segundos</button>
 		</div>
-		
-        <div id="overlay" style="display:none;">
-            <div class="spinner" id="spinner"></div>
-            <br />
-            <label class="spinner-message" id="spinnerMessage"></label>
-        </div>
+
+		<div id="containerSpinner" class="spinner-overlay" style="display:none;">
+			<div class="spinner"></div>
+			<div class="spinner-message" id="spinnerMessage"></div>
+		</div>
     </body>
 </html>

@@ -11,20 +11,19 @@ Componente para carregamento de telas para melhorar a experiência do usuário -
 ```html
 <link rel="stylesheet" href="css/spinner.css">
 
-<script src="js/spinner.js"></script>
+<script type="text/javascript" src="js/spinner.js"></script>
 ```
 
 2) Crie o elemento no corpo do HTML:
 
 ```html
-<div id="overlay" style="display: none;">
-	<div class="spinner" id="spinner"></div>
-	<br />
-	<label class="spinner-message" id="spinnerMessage"></label>
+<div id="containerSpinner" class="spinner-overlay" style="display:none;">
+    <div class="spinner"></div>
+    <div class="spinner-message" id="spinnerMessage"></div>
 </div>
 ```
 
-3) Para habilitar o spinner, chame a função abaixo especificando um parâmetro que exibirá seu respectivo valor junto ao spinner:
+3) Para habilitar o spinner, chame a função abaixo especificando uma mensagem como parâmetro que será exibida junto ao spinner:
 
 ```html
 ShowSpinner("Carregando dados...");
